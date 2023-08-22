@@ -230,18 +230,28 @@ spil
 $$
 \begin{aligned}
 f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  & = \\
-f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right) & \color{blue}- f\left( x_{0},y_{0} + h \cdot u_{2} \right)  + f\left( x_{0},y_{0} + h \cdot u_{2} \right) \color{black} - f(x_{0},y_{0})
+f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right) & \color{red}- f\left( x_{0},y_{0} + h \cdot u_{2} \right)  + f\left( x_{0},y_{0} + h \cdot u_{2} \right) \color{black} - f(x_{0},y_{0})
+\end{aligned}
+$$
+Bemærk, at vi har lagt et led til og trukket det samme led fra (markeret med rødt). 
+
+Vi ser nu, at de to første led kun afviger på $x$-koordinaten (markeret med blåt nedenfor), og de to sidste led afviger
+kun på $y$-koordinaten (markeret med grønt): 
+$$
+\begin{aligned}
+f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})   &= \\
+ \color{blue} f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right)  - & \color{blue} f\left( x_{0},y_{0} + h \cdot u_{2} \right)  \color{black} + \color{green} f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})
 \end{aligned}
 $$ {#eq-funktionstilvaekst}
-Bemærk, at vi har lagt et led til og trukket det samme led fra (markeret med blåt). De to
-første led afviger nu kun på $x$-koordinaten, og de to sidste led afviger
-kun på $y$-koordinaten. Ved at bruge den omkskrevne middelværdisætning i (@eq-middel_omskrevet) på de to
+
+
+Ved at bruge den omkskrevne middelværdisætning i (@eq-middel_omskrevet) på de to
 snitfunktioner $f\left( x,y_{0} + h \cdot u_{2} \right)$ som en
 funktion af $x$ og $f(x_{0},y)$ som en funktion af $y$, får vi nu følgende:
 
-$$f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} + h \cdot u_{2} \right) = f_{x}^{'}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1}$$
+$$\color{blue} f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} + h \cdot u_{2} \right) = f_{x}^{'}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1}$$
 og
-$$f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} \right) = f_{y}^{'}(x_{0},c_{2}) \cdot h \cdot u_{2}$$
+$$\color{green} f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} \right) = f_{y}^{'}(x_{0},c_{2}) \cdot h \cdot u_{2}$$
 
 Her har vi brugt, at den afledede af en snitfunktion, hvor vi kun
 varierer $x$ er $f_{x}^{'}$, og den afledede af en snitfunktion, hvor vi
@@ -252,7 +262,7 @@ $y_{0} + h \cdot u_{2}$.
 Indsætter vi de to udtryk ovenfor på højreside i (@eq-funktionstilvaekst) får vi
 $$
 \begin{aligned}
-f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  & = f_{x}^{'}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1} + f_{y}^{'}(x_{0},c_{2}) \cdot h \cdot u_{2} \\
+f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  & = \color{blue} f_{x}^{'}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1} \color{black} + \color{green} f_{y}^{'}(x_{0},c_{2}) \cdot h \cdot u_{2} \\
 \end{aligned}
 $$ 
 

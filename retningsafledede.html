@@ -3209,17 +3209,24 @@ u_{2} \\
 </figure>
 </div>
 <p>Middelværdisætningen siger altså bare, at hvis man forbinder start og slutpunktet – den blå linje – og udregner dens hældning, så kan man altid finde et punkt i det indre af intervallet, hvor tangenten i punktet – den grønne linje – har samme hældning.</p>
-<p>Vi vender nu tilbage til definitionen af de retningsafledede og omskriver tælleren i (<a href="#eq-retningsafledede">1</a>) for at kunne bringe middelværdisætningen i spil <span id="eq-funktionstilvaekst"><span class="math display">\[
+<p>Vi vender nu tilbage til definitionen af de retningsafledede og omskriver tælleren i (<a href="#eq-retningsafledede">1</a>) for at kunne bringe middelværdisætningen i spil <span class="math display">\[
 \begin{aligned}
 f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  &amp; = \\
-f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right) &amp; \color{blue}- f\left( x_{0},y_{0} + h \cdot u_{2} \right)  + f\left( x_{0},y_{0} + h \cdot u_{2} \right) \color{black} - f(x_{0},y_{0})
+f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right) &amp; \color{red}- f\left( x_{0},y_{0} + h \cdot u_{2} \right)  + f\left( x_{0},y_{0} + h \cdot u_{2} \right) \color{black} - f(x_{0},y_{0})
 \end{aligned}
-\tag{3}\]</span></span> Bemærk, at vi har lagt et led til og trukket det samme led fra (markeret med blåt). De to første led afviger nu kun på <span class="math inline">\(x\)</span>-koordinaten, og de to sidste led afviger kun på <span class="math inline">\(y\)</span>-koordinaten. Ved at bruge den omkskrevne middelværdisætning i (<a href="#eq-middel_omskrevet">2</a>) på de to snitfunktioner <span class="math inline">\(f\left( x,y_{0} + h \cdot u_{2} \right)\)</span> som en funktion af <span class="math inline">\(x\)</span> og <span class="math inline">\(f(x_{0},y)\)</span> som en funktion af <span class="math inline">\(y\)</span>, får vi nu følgende:</p>
-<p><span class="math display">\[f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} + h \cdot u_{2} \right) = f_{x}^{&#39;}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1}\]</span> og <span class="math display">\[f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} \right) = f_{y}^{&#39;}(x_{0},c_{2}) \cdot h \cdot u_{2}\]</span></p>
+\]</span> Bemærk, at vi har lagt et led til og trukket det samme led fra (markeret med rødt).</p>
+<p>Vi ser nu, at de to første led kun afviger på <span class="math inline">\(x\)</span>-koordinaten (markeret med blåt nedenfor), og de to sidste led afviger kun på <span class="math inline">\(y\)</span>-koordinaten (markeret med grønt): <span id="eq-funktionstilvaekst"><span class="math display">\[
+\begin{aligned}
+f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})   &amp;= \\
+\color{blue} f\left( x_{0} + h \cdot u_{1},y_{0} +  h \cdot u_{2} \right)  - &amp; \color{blue} f\left( x_{0},y_{0} + h \cdot u_{2} \right)  \color{black} + \color{green} f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})
+\end{aligned}
+\tag{3}\]</span></span></p>
+<p>Ved at bruge den omkskrevne middelværdisætning i (<a href="#eq-middel_omskrevet">2</a>) på de to snitfunktioner <span class="math inline">\(f\left( x,y_{0} + h \cdot u_{2} \right)\)</span> som en funktion af <span class="math inline">\(x\)</span> og <span class="math inline">\(f(x_{0},y)\)</span> som en funktion af <span class="math inline">\(y\)</span>, får vi nu følgende:</p>
+<p><span class="math display">\[\color{blue} f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} + h \cdot u_{2} \right) = f_{x}^{&#39;}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1}\]</span> og <span class="math display">\[\color{green} f\left( x_{0},y_{0} + h \cdot u_{2} \right) - f\left( x_{0},y_{0} \right) = f_{y}^{&#39;}(x_{0},c_{2}) \cdot h \cdot u_{2}\]</span></p>
 <p>Her har vi brugt, at den afledede af en snitfunktion, hvor vi kun varierer <span class="math inline">\(x\)</span> er <span class="math inline">\(f_{x}^{&#39;}\)</span>, og den afledede af en snitfunktion, hvor vi kun varierer <span class="math inline">\(y\)</span> er <span class="math inline">\(f_{y}^{&#39;}\)</span>. Tallet <span class="math inline">\(c_{1}\)</span> ligger mellem <span class="math inline">\(x_{0}\)</span> og <span class="math inline">\(x_{0} + h \cdot u_{1}\)</span>, og tallet <span class="math inline">\(c_{2}\)</span> ligger mellem <span class="math inline">\(y_{0}\)</span> og <span class="math inline">\(y_{0} + h \cdot u_{2}\)</span>.</p>
 <p>Indsætter vi de to udtryk ovenfor på højreside i (<a href="#eq-funktionstilvaekst">3</a>) får vi <span class="math display">\[
 \begin{aligned}
-f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  &amp; = f_{x}^{&#39;}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1} + f_{y}^{&#39;}(x_{0},c_{2}) \cdot h \cdot u_{2} \\
+f\left( x_{0} + h \cdot u_{1},y_{0} + h \cdot u_{2} \right) - f(x_{0},y_{0})  &amp; = \color{blue} f_{x}^{&#39;}(c_{1},y_{0} + h \cdot u_{2}) \cdot h \cdot u_{1} \color{black} + \color{green} f_{y}^{&#39;}(x_{0},c_{2}) \cdot h \cdot u_{2} \\
 \end{aligned}
 \]</span></p>
 <p>Og bruges dette i definitionen for den retningsafledede i (<a href="#eq-retningsafledede">1</a>) ender vi med <span class="math display">\[
