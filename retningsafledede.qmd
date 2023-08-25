@@ -74,11 +74,10 @@ $$
 
 Man bruger det til at definere de to første ordens partielle afledede for en funktion $f$ af to variable
 $$
-\begin{aligned*}
-&\lim_{h \rightarrow 0}{\frac{f\left( x_{0} + h,y_{0} \right) - f(x_{0},y_{0})}{h} = f_{x}^{'}(x_{0},y_{0})} \\
-
-&\lim_{h \rightarrow 0}{\frac{f\left( x_{0},y_{0} + h \right) - f(x_{0},y_{0})}{h} = f_{y}^{'}(x_{0},y_{0})}
-\end{aligned*}
+\begin{aligned}
+&\lim_{h \rightarrow 0} \frac{f\left( x_{0} + h,y_{0} \right) - f(x_{0},y_{0})}{h} = f_{x}^{'}(x_{0},y_{0})\\
+&\lim_{h \rightarrow 0} \frac{f\left( x_{0},y_{0} + h \right) - f(x_{0},y_{0})}{h} = f_{y}^{'}(x_{0},y_{0})
+\end{aligned}
 $$
 hvis grænserne eksisterer.
 Her tager man et skridt $h$ i enten $x$-aksens eller $y$-aksens retning ud fra punktet $(x_{0},y_{0})$ og beregner en hældning af grafen i den retning ved hjælp af en grænseværdi af sekanthældninger for snitfunktionerne $f(x,y_{0})$ og $f(x_{0},y)$, som hver for sig er almindelige funktioner af en variabel, da man kun ændrer enten $x$-koordinaten eller $y$-koordinaten.
@@ -140,7 +139,7 @@ $$
 D_{\vec{u}}f\left( x_{0},y_{0} \right) = \lvert \nabla f(x_{0},y_{0}) \rvert \cdot \cos(v)
 $$
 
-hvor $v$ er vinklen mellem gradientvektoren $\nabla f\left( x_{0},y_{0} \right)\$og den valgte retning $\vec{u}$.
+hvor $v$ er vinklen mellem gradientvektoren $\nabla f\left( x_{0},y_{0} \right)$ og den valgte retning $\vec{u}$.
 
 Vi ved, at $-1 \leq \cos(v) \leq 1$ samt at $\cos(0^{{^\circ}})=1$ og $\cos(180^{{^\circ}})=-1$.
 Det følger derfor, at den retningsafledede er størst (og dermed at $f$ vokser mest), når $\vec{u}$ peger i $\nabla f(x_{0},y_{0})$'s retning.
