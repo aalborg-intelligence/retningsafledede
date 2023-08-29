@@ -46,7 +46,7 @@ Dette er illustreret i @fig-graf_kontinuert.
 #| fig-cap: Grafen for en kontinuert funktion.
 #| label: fig-graf_kontinuert
 library(ggplot2)
-library(shiny)
+#library(shiny)
 f = function(x) 0.02*(x + 2)*(x - 3)*(x - 5)
 fig <- ggplot() +
   xlim(c(-4, 8)) +
