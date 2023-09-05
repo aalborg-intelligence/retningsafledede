@@ -296,7 +296,7 @@ Betragt en funktion $f$ givet ved forskriften $$
 f\left( x,y \right) = \left( \left( x - 5 \right)^{2} + 3 \right) \cdot \left( 5 + \left( y - 10 \right)^{2} \right) + 30
 $$
 
-Hvis man ser lidt på forskriften, kan man måske overbvise sig selv om, at funktionen har et minimum på 45, som fås, når $\left( x,y \right) = (5,10)$.
+Hvis man ser lidt på forskriften, kan man måske overbevise sig selv om, at funktionen har et minimum på 45, som fås, når $\left( x,y \right) = (5,10)$.
 
 Grafen ses i @fig-graf.
 
